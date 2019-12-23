@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    web:
+        build: ./
+        ports:
+            - "8081:8081"
+        volumes:
+            - "./src:/code/src"
+        container_name: web1
+
+    mongodb:
+        image: "mongo"
+        container_name: mongodb1
